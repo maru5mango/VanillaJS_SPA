@@ -9,10 +9,10 @@
 
 ### `Pages`
 
-- '/' : Home
-- '/:id' : movie Detail
-- '/signup' : signup
-- '/login' : login
+- `/` : Home
+- `/:id` : movie Detail
+- `/signup` : signup
+- `/login` : login
 
 ### `Component`
 
