@@ -1,0 +1,25 @@
+{
+  "name": "vanilla-spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maru5mango/VanillaJS_SPA.git"
+  },
+  "keywords": [
+    "vanillajs",
+    "spa",
+    "webpack",
+    "babel"
+  ],
+  "author": "maru5mango",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maru5mango/VanillaJS_SPA/issues"
+  },
+  "homepage": "https://github.com/maru5mango/VanillaJS_SPA#readme"
+}
