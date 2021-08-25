@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx live-server src --verbose"
+    "dev": "npx live-server src --verbose",
+    "build": "webpack --mode=production",
+    "start": "npx live-server dist --verbose"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,16 @@
   },
   "homepage": "https://github.com/maru5mango/VanillaJS_SPA#readme",
   "dependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "webpack": "^5.51.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^6.2.0",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.2.0",
+    "webpack-cli": "^4.8.0"
   }
 }

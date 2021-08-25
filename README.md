@@ -10,6 +10,7 @@
 ### `Pages`
 
 - `/` : Home
+- `/about` : Aout
 - `/:id` : movie Detail
 - `/signup` : signup
 - `/login` : login
