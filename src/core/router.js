@@ -1,6 +1,6 @@
 export const parseCurrentUrl = () => {
-  const url = location.href.toLowerCase().split("/");
-  const params = url.slice(2);
+  const path = location.hash.slice(1).toLowerCase() || "/";
+  const params = path.split("/");
 
   const request = {
     resource: params[0] || null,

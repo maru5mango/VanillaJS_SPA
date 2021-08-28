@@ -70,7 +70,7 @@ import { parseCurrentUrl } from "../core/router.js";
 export default class DetailPage extends Component {
   setup() {
     this.$state = {
-      queryId: parseCurrentUrl().routes.slice(1),
+      queryId: parseCurrentUrl().resource,
     };
   }
   template() {

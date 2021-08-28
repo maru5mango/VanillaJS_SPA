@@ -1,28 +1,17 @@
-import { observable, observe } from "./observer.js";
-
 export class Component {
   state;
   props;
   $el;
-  $store;
 
   constructor($el, props) {
     this.$el = $el;
     this.props = props;
     this.setup();
-    this.useStore();
     this.setEvent();
+    this.fetchData();
     this.render();
   }
   setup() {}
-  useStore() {
-    this.$store = observable(this.initState());
-    observe(() => {
-      this.render();
-      this.setEvent();
-      this.mounted();
-    });
-  }
   setState(newState) {
     this.$state = { ...this.$state, ...newState };
     this.render();
@@ -33,6 +22,7 @@ export class Component {
   template() {
     return "";
   }
+  fetchData() {}
   render() {
     this.$el.innerHTML = this.template();
     this.mounted();

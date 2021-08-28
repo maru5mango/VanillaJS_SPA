@@ -1,31 +1,34 @@
-// import { getPostsList } from "../api/getInfo";
-
-// const Home = {
-//   render: async () => {
-//     let posts = await getPostsList();
-//     let view = /*html*/ `
-//             <section class="section">
-//                 <h1> Home </h1>
-//                 <ul>
-//                     ${posts
-//                       .map(
-//                         (post) =>
-//                           /*html*/ `<li><a href="#/p/${post.id}">${post.title}</a></li>`
-//                       )
-//                       .join("\n ")}
-//                 </ul>
-//             </section>
-//         `;
-//     return view;
-//   },
-//   after_render: async () => {},
-// };
-
-// export default Home;
+import { getGenresList } from "../api/getInfo.js";
 
 import { Component } from "../core/component.js";
 export default class Home extends Component {
   template() {
-    return `<div>Home</div>`;
+    return `
+    <div>Home</div>
+    <ul>
+      ${this.$state.genreList.map((item) => {
+        return `
+        <li>
+          <h1>${item.id}/${item.name}</h1>
+        </li>
+        `;
+      })}
+    </ul>
+    `;
+  }
+  setup() {
+    this.$state = {
+      genreList: [],
+      genreMovieList: [],
+    };
+  }
+  mounted() {}
+  fetchData() {
+    getGenresList().then((data) => {
+      this.setState({
+        genreList: data.genres,
+      });
+      // console.log(data);
+    });
   }
 }
